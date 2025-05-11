@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج بيتك التعليمي</title>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامج بيتك التعليمي</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome للأيقونات -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+  <!-- AOS مكتبة التحريك -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <meta name="description" content="برنامج بيتك التعليمي لدعم طلاب تكنولوجيا المعلومات وإدارة الأعمال المولودين عامي 2009 و2010.">
+  <meta name="keywords" content="برنامج بيتك, تعليم, تكنولوجيا المعلومات, إدارة الأعمال, الأردن, ريادة الأعمال">
+  <meta name="author" content="فهد العواملة">
+
+  <style>
+    :root {
+      --main-color: #e67e22; /* ذهبية */
+      --secondary-color: #f39c12; /* اللون الفضي */
+      --dark-color: #2c3e50;
+      --light-color: #ecf0f1;
+      --highlight-color: #8e44ad; /* اللون البنفسجي الهادئ */
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: var(--light-color);
+      color: #333;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--dark-color), var(--main-color));
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      border-bottom: 5px solid var(--highlight-color);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      background: var(--secondary-color);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+      color: var(--highlight-color);
+    }
+
+    main {
+      padding: 2rem 4rem;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    section.active {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background: var(--dark-color);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      border-top: 5px solid var(--highlight-color);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      background: var(--main-color);
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: var(--secondary-color);
+    }
+
+    .countdown {
+      font-size: 2rem;
+      color: var(--highlight-color);
+      text-align: center;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>برنامج بيتك التعليمي</h1>
+    <p>نحو جيل متميز من طلاب تكنولوجيا المعلومات وإدارة الأعمال من مواليد 2009 و2010</p>
+    <div class="countdown" id="countdown"></div>
+  </header>
+
+  <nav>
+    <a href="#about"><i class="fas fa-info-circle"></i> عن البرنامج</a>
+    <a href="#goals"><i class="fas fa-bullseye"></i> أهداف البرنامج</a>
+    <a href="#features"><i class="fas fa-star"></i> مزايا البرنامج</a>
+    <a href="#students"><i class="fas fa-users"></i> الطلاب المستهدفون</a>
+    <a href="#event"><i class="fas fa-calendar-alt"></i> الفعالية</a>
+    <a href="#contact"><i class="fas fa-envelope"></i> التواصل</a>
+    <a href="#designer"><i class="fas fa-user"></i> عن المصمم</a>
+  </nav>
+
+  <main>
+    <section id="about" class="active" data-aos="fade-up">
+      <h2>عن البرنامج</h2>
+      <p>مبادرة تعليمية تهدف إلى تطوير الطلبة في مجالات تكنولوجيا المعلومات وإدارة الأعمال وفقاً لأحدث متطلبات السوق.</p>
+    </section>
+
+    <section id="goals" data-aos="fade-up">
+      <h2>أهداف البرنامج</h2>
+      <ul>
+        <li>تنمية مهارات القيادة والإدارة.</li>
+        <li>تعزيز قدرات البرمجة والتحليل.</li>
+        <li>ربط النظريات بالتطبيق العملي.</li>
+        <li>التجهيز للتحول الرقمي.</li>
+      </ul>
+    </section>
+
+    <section id="features" data-aos="fade-up">
+      <h2>مزايا البرنامج</h2>
+      <ul>
+        <li>بيئة تفاعلية مدعومة بالتقنيات الحديثة.</li>
+        <li>ورش عمل بالتعاون مع مؤسسات معروفة.</li>
+        <li>مشاريع محاكاة للتحديات الواقعية.</li>
+      </ul>
+    </section>
+
+    <section id="students" data-aos="fade-up">
+      <h2>الطلاب المستهدفون</h2>
+      <p>طلاب مواليد 2009 و2010 من تخصصات التكنولوجيا وإدارة الأعمال مع تعزيز العمل الجماعي.</p>
+    </section>
+
+    <section id="event" data-aos="fade-up">
+      <h2>الفعالية القادمة</h2>
+      <p>تعقد في مركز الملكة رانيا للمعرفة بتاريخ <strong>1 يونيو 2025</strong>.
+        تشمل ورش عمل، مسابقات، عروض طلابية، وجوائز قيمة.</p>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>التواصل والاستفسار</h2>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="الاسم الكامل" required>
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+        <textarea id="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+      <p>أو راسلنا عبر البريد: <a href="mailto:zsszxx04@gmail.com">zsszxx04@gmail.com</a></p>
+    </section>
+
+    <section id="designer" data-aos="fade-up">
+      <h2>عن المصمم</h2>
+      <p>تم تصميم هذا الموقع بواسطة فهد العواملة، طالب مهتم بمجالات تكنولوجيا المعلومات وإدارة الأعمال، مع الالتزام بأعلى معايير تجربة المستخدم.</p>
+    </section>
+  </main>
+
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025 برنامج بيتك التعليمي
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('main section');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add('active');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+
+    const countDownDate = new Date("Jun 1, 2025 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `الوقت المتبقي: ${days} يوم ${hours} ساعة ${minutes} دقيقة ${seconds} ثانية`;
+
+      if (distance < 0) {
+        clearInterval(interval);
+        countdownEl.innerHTML = "انتهى الوقت!";
+      }
+    }, 1000);
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('تم إرسال رسالتك بنجاح! شكراً لتواصلك معنا.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
