@@ -1,159 +1,149 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css" />
-  <title>برنامج بيتك التعليمي</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>برنامج بيتك التعليمي | Educational Communication Launcher</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>برنامج بيتك التعليمي</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <!-- الخطوط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Font Awesome للأيقونات -->
-  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 
   <!-- AOS مكتبة التحريك -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    rel="stylesheet"
+  />
 
-  <meta name="description" content="برنامج بيتك التعليمي لدعم طلاب تكنولوجيا المعلومات وإدارة الأعمال المولودين عامي 2009 و2010.">
-  <meta name="keywords" content="برنامج بيتك, تعليم, تكنولوجيا المعلومات, إدارة الأعمال, الأردن, ريادة الأعمال">
-  <meta name="author" content="فهد العواملة">
+  <!-- وصف الصفحة والكلمات المفتاحية -->
+  <meta
+    name="description"
+    content="برنامج بيتك التعليمي لدعم طلاب تكنولوجيا المعلومات وإدارة الأعمال المولودين عامي 2009 و2010 تحت إشراف Educational Communication Launcher."
+  />
+  <meta
+    name="keywords"
+    content="برنامج بيتك, تعليم, تكنولوجيا المعلومات, إدارة الأعمال, الأردن, ريادة الأعمال, Educational Communication Launcher"
+  />
+  <meta name="author" content="فهد العواملة" />
 
- 
-<head> 
+  <!-- Open Graph مخصص للمشاركة على وسائل التواصل الاجتماعي -->
+  <meta property="og:title" content="برنامج بيتك التعليمي" />
+  <meta
+    property="og:description"
+    content="برنامج تطوير مهارات طلاب تكنولوجيا المعلومات وإدارة الأعمال"
+  />
+  <meta property="og:image" content="LOGO.png" />
+  <meta property="og:url" content="https://www.baytak-edu.org" />
+
+  <!-- تحسينات لمحركات البحث -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.baytak-edu.org" />
 </head>
 
 <body>
+  <!-- الهيدر -->
   <header>
-    <h1>برنامج بيتك التعليمي</h1>
-    <p>نحو جيل متميز من طلاب تكنولوجيا المعلومات وإدارة الأعمال من مواليد 2009 و2010</p>
-    <div class="countdown" id="countdown"></div>
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo">
+          <img
+            src="LOGO.png"
+            alt="شعار برنامج بيتك التعليمي"
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <h1>برنامج بيتك التعليمي</h1>
+      <p>
+        نحو جيل متميز من طلاب تكنولوجيا المعلومات وإدارة الأعمال من مواليد
+        2009 و2010
+      </p>
+
+      <div class="countdown">
+        <div id="countdown-text">العد التنازلي للفعالية القادمة</div>
+        <div class="countdown-boxes" id="countdown-boxes">
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-days">00</span>
+            <span class="countdown-label">يوم</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-hours">00</span>
+            <span class="countdown-label">ساعة</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-minutes">00</span>
+            <span class="countdown-label">دقيقة</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-number" id="countdown-seconds">00</span>
+            <span class="countdown-label">ثانية</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="event.html" class="cta-button">سجل الآن في الفعالية</a>
+    </div>
   </header>
 
+  <!-- القائمة العلوية -->
   <nav>
-    <a href="#about"><i class="fas fa-info-circle"></i> عن البرنامج</a>
-    <a href="#goals"><i class="fas fa-bullseye"></i> أهداف البرنامج</a>
-    <a href="#features"><i class="fas fa-star"></i> مزايا البرنامج</a>
-    <a href="#students"><i class="fas fa-users"></i> الطلاب المستهدفون</a>
-    <a href="#event"><i class="fas fa-calendar-alt"></i> الفعالية</a>
-    <a href="#contact"><i class="fas fa-envelope"></i> التواصل</a>
-    <a href="#designer"><i class="fas fa-user"></i> عن المصمم</a>
+    <div class="container navbar">
+      <div class="nav-brand">بيتك التعليمي</div>
+
+      <div class="mobile-toggle" id="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="nav-menu" id="nav-menu">
+        <a href="about.html" class="nav-link active">
+          <i class="fas fa-info-circle"></i> عن البرنامج
+        </a>
+        <a href="goals.html" class="nav-link">
+          <i class="fas fa-bullseye"></i> أهداف البرنامج
+        </a>
+        <a href="features.html" class="nav-link">
+          <i class="fas fa-star"></i> مزايا البرنامج
+        </a>
+        <a href="contact.html" class="nav-link">
+          <i class="fas fa-envelope"></i> تواصل معنا
+        </a>
+      </div>
+    </div>
   </nav>
 
-  <main>
-    <section id="about" class="active" data-aos="fade-up">
-      <h2>عن البرنامج</h2>
-      <p>مبادرة تعليمية تهدف إلى تطوير الطلبة في مجالات تكنولوجيا المعلومات وإدارة الأعمال وفقاً لأحدث متطلبات السوق.</p>
-    </section>
-
-    <section id="goals" data-aos="fade-up">
-      <h2>أهداف البرنامج</h2>
-      <ul>
-        <li>تنمية مهارات القيادة والإدارة.</li>
-        <li>تعزيز قدرات البرمجة والتحليل.</li>
-        <li>ربط النظريات بالتطبيق العملي.</li>
-        <li>التجهيز للتحول الرقمي.</li>
-      </ul>
-    </section>
-
-    <section id="features" data-aos="fade-up">
-      <h2>مزايا البرنامج</h2>
-      <ul>
-        <li>بيئة تفاعلية مدعومة بالتقنيات الحديثة.</li>
-        <li>ورش عمل بالتعاون مع مؤسسات معروفة.</li>
-        <li>مشاريع محاكاة للتحديات الواقعية.</li>
-      </ul>
-    </section>
-
-    <section id="students" data-aos="fade-up">
-      <h2>الطلاب المستهدفون</h2>
-      <p>طلاب مواليد 2009 و2010 من تخصصات التكنولوجيا وإدارة الأعمال مع تعزيز العمل الجماعي.</p>
-    </section>
-
-    <section id="event" data-aos="fade-up">
-      <h2>الفعالية القادمة</h2>
-      <p>تعقد في مركز الملكة رانيا للمعرفة بتاريخ <strong>1 يونيو 2025</strong>.
-        تشمل ورش عمل، مسابقات، عروض طلابية، وجوائز قيمة.</p>
-    </section>
-
-    <section id="contact" data-aos="fade-up">
-      <h2>التواصل والاستفسار</h2>
-      <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="الاسم الكامل" required>
-        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-        <textarea id="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-      <p>أو راسلنا عبر البريد: <a href="mailto:zsszxx04@gmail.com">zsszxx04@gmail.com</a></p>
-    </section>
-
-    <section id="designer" data-aos="fade-up">
-      <h2>عن المصمم</h2>
-      <p>تم تصميم هذا الموقع بواسطة فهد العواملة، طالب مهتم بمجالات تكنولوجيا المعلومات وإدارة الأعمال، مع الالتزام بأعلى معايير تجربة المستخدم.</p>
-    </section>
-  </main>
-
-  <footer>
-    جميع الحقوق محفوظة &copy; 2025 برنامج بيتك التعليمي
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- جافاسكريبت للتحكم بالقائمة على الجوال -->
   <script>
-    AOS.init();
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-    const links = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('main section');
-
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        sections.forEach(section => {
-          section.classList.remove('active');
-        });
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.classList.add('active');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      });
-    });
-
-    const countDownDate = new Date("Jun 1, 2025 00:00:00").getTime();
-    const countdownEl = document.getElementById("countdown");
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `الوقت المتبقي: ${days} يوم ${hours} ساعة ${minutes} دقيقة ${seconds} ثانية`;
-
-      if (distance < 0) {
-        clearInterval(interval);
-        countdownEl.innerHTML = "انتهى الوقت!";
-      }
-    }, 1000);
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('تم إرسال رسالتك بنجاح! شكراً لتواصلك معنا.');
-      this.reset();
+    mobileToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
     });
   </script>
-
+<!-- ...existing code... -->
+  </div>
+  <footer class="footer">
+    جميع الحقوق محفوظة لدى &copy;Educational Communication Launcher.2025
+  </footer>
+</body>
+<!-- ...existing code... -->
+  <!-- روابط مكتبات JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  
 </body>
 </html>
